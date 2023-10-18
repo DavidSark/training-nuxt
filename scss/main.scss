@@ -1,0 +1,11 @@
+@import './foundations/reset';
+@import './foundations/variables';
+@import './foundations/functions';
+
+
+body{
+  font-family: $primary-font;
+  font-size: $regular-font-size;
+  line-height: 1.2;
+ 
+}
