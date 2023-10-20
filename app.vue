@@ -12,6 +12,6 @@ onMounted (()=>{
   
     <MyHeader/>
     <NuxtPage/>
-   <MyFooter/>
+    <MyFooter/>
   
 </template>

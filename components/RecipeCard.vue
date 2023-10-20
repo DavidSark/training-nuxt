@@ -18,8 +18,8 @@ const buttonLabel = computed(()=> isAlreadyInCart(id) ? 'Remove from cart' : 'Ad
 
 <template>  
  
-
  <div class='card'>
+  
     <div class='card__image'>
       <img :src='image' :alt='imageAlt'/>
     </div>

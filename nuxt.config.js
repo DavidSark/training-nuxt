@@ -21,7 +21,9 @@ export default defineNuxtConfig({
   ],
   modules: [
     '@nuxtjs/prismic',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxtjs/storybook'
+
   ],
   prismic: { 
     endpoint: process.env.NUXT_PRISMIC_ENDPOINT 
