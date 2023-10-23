@@ -4,13 +4,13 @@ const { data: home, error } = await useAsyncData('home', () => client.getSingle(
 
 
 const env = useRuntimeConfig()
-    
+
 const props = defineProps({
     title: Array,
     text: Array,
     buttons: Array,
- 
-  
+
+
 })
 
 const { data: recipes } = await useAsyncData('recipes', async () => {
@@ -42,58 +42,44 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
 
 
         <HeroCard :menucard="home.data.menucard"></HeroCard>
-        <div class="recipes-list">
-            <div v-for="(recipes, index) in recipes" :key="recipe_id">
-                <RecipeCard :title="recipes.recipe_name" :description="recipes.recipe_description"
-                    :image="recipes.image_url" :id="recipes.recipe_id"></RecipeCard>
-            </div>
-        </div>
 
-       
-        
+
+        <RecipeCard></RecipeCard>
+
 
     </section>
 </template>
 
 <style lang="scss" >
 .c-hero {
-    &-flex{
+    &-flex {
         &-text {
-        font-size: 18px;
-        line-height: 1.3;
-        color: black
-    }
-
-    &-buttons {
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-
-        &:not(:first-child) {
-            margin-top: 2rem;
+            font-size: 18px;
+            line-height: 1.3;
+            color: black
         }
-    }
+
+        &-buttons {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            &:not(:first-child) {
+                margin-top: 2rem;
+            }
+        }
+
         &-title {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 1.2;
-        color: black;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: black;
 
-        strong {
-            color: orange;
+            strong {
+                color: orange;
 
+            }
         }
     }
-
-    }
- 
-    .recipes-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        place-items: center;
-        gap: rem(40);
-    }
-
-   
 }
 </style>
