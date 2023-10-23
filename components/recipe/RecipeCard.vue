@@ -73,7 +73,7 @@ const buttonLabel = computed(()=> isAlreadyInCart(id) ? 'Remove from cart' : 'Ad
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card{
  border-radius: rem(20);
  overflow: hidden;

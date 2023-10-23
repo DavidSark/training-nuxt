@@ -31,7 +31,7 @@ const isVideoButton = computed(() => {
   </button>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .c-button {
   background-color: $primary-color;
   background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);

@@ -1,13 +1,15 @@
 <script setup>
+const { client } = usePrismic()
+const { data: home, error } = await useAsyncData('home', () => client.getSingle("homepage"))
+
 
 const env = useRuntimeConfig()
-import MyButton from '../elements/MyButton.vue';
-import RecipeCard from '../RecipeCard.vue';
+    
 const props = defineProps({
     title: Array,
     text: Array,
     buttons: Array,
-    heroCard: Array
+ 
   
 })
 
@@ -39,15 +41,15 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
         </div>
 
 
-       
-       
-
+        <HeroCard :menucard="home.data.menucard"></HeroCard>
         <div class="recipes-list">
             <div v-for="(recipes, index) in recipes" :key="recipe_id">
                 <RecipeCard :title="recipes.recipe_name" :description="recipes.recipe_description"
                     :image="recipes.image_url" :id="recipes.recipe_id"></RecipeCard>
             </div>
         </div>
+
+       
         
 
     </section>
