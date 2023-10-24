@@ -24,6 +24,9 @@ useSeoMeta({
     <ServiceCard :servicetitle="home.data.servicetitle" :service="home.data.service"/>
 
     <HowTo v-bind="{ tag: 'How to', title: 'Food us An Important Part Of A Balanced Diet', items:home.data.how_to}"/>
+
+    <Testimonial :testimonial="home.data.testimonial" />
+   
 </div>
 
 </template>
