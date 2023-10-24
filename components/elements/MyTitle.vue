@@ -11,6 +11,7 @@ const props = defineProps(({
 
 const className = computed (()=>({
   ' -big': props.size === 'big',
+  ' -medium': props.size === 'medium',
   ' -small': props.size === 'small',
 
   ' -h1': props.el === 'h1',
@@ -41,7 +42,9 @@ const className = computed (()=>({
   font-size: $regular-font-size;
   &.-small{
     font-size: $medium-font-size;
-
+  }
+  &.-medium{
+    font-size: $big-font-size;
   }
   &.-big{
     font-size: $giant-font-size;
