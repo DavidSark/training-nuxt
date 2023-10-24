@@ -12,29 +12,27 @@ useSeoMeta({
 })
 </script>
 <template>
-   
+  <div class="main">
 
-
-<div class="main">
-
-    <Hero :title="home.data.hero_title" :text="home.data.hero_text" :buttons="home.data.hero_buttons"/>
+    <Hero :title="home.data.hero_title" :text="home.data.hero_text" :buttons="home.data.hero_buttons" />
 
     <Information :information="home.data.information" />
+    
+    <RecipeCard :sectiontitle="home.data.menusection"></RecipeCard>
 
-    <ServiceCard :servicetitle="home.data.servicetitle" :service="home.data.service"/>
+    <ServiceCard :servicetitle="home.data.servicetitle" :service="home.data.service" />
 
-    <HowTo v-bind="{ tag: 'How to', title: 'Food us An Important Part Of A Balanced Diet', items:home.data.how_to}"/>
+    <HowTo :titles="home.data.howtotitle" :items="home.data.how_to"/>
 
     <Testimonial :testimonial="home.data.testimonial" />
-   
-    <Newsletter :newsletter="home.data.newsletter" :button="home.data.newsletter_button"/>
 
-</div>
+    <Newsletter :newsletter="home.data.newsletter" :button="home.data.newsletter_button" />
 
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.main{
-    margin: 0 rem(110) 0 rem(110) ;
+.main {
+  margin: 0 rem(110) 0 rem(110);
 }
 </style>

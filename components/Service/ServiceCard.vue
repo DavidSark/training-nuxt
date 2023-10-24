@@ -25,7 +25,7 @@ const props = defineProps({
   justify-content: center;
   color:$primary-color;
   margin-top: rem(130);
-  font-size: $medium-font-size;
+  font-size: $small-font-size;
 }
 
 .c-title {
