@@ -27,6 +27,9 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
                     :image="recipes.image_url" :id="recipes.recipe_id" />
             </div>
         </div>
+        <div class="button">
+            <MyButton size="medium" variant="rounded" hasIcon="true" sizeText="small">See more products</MyButton>
+        </div>
     </div>
 </template>
 
@@ -52,5 +55,9 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
     gap: rem(40);
+}
+.button{
+    margin-top: rem(50);
+    text-align: center;
 }
 </style>
