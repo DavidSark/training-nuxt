@@ -39,14 +39,7 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
                 </div>
             </div>
         </div>
-
-
         <HeroCard :menucard="home.data.menucard"></HeroCard>
-
-
-        <RecipeCard></RecipeCard>
-
-
     </section>
 </template>
 
