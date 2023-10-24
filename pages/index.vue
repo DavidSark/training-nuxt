@@ -16,12 +16,12 @@ useSeoMeta({
 
 
 <div class="main">
-      <pre>{{ home.data.hero_cards}}</pre>
+
     <Hero :title="home.data.hero_title" :text="home.data.hero_text" :buttons="home.data.hero_buttons"/>
 
     <Information :information="home.data.information" />
-    <pre>{{ home.data.service }}</pre>
-    <ServiceCard :service="home.data.service"/>
+
+    <ServiceCard :servicetitle="home.data.servicetitle" :service="home.data.service"/>
 
     <HowTo v-bind="{ tag: 'How to', title: 'Food us An Important Part Of A Balanced Diet', items:home.data.how_to}"/>
 </div>
