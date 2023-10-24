@@ -27,6 +27,8 @@ useSeoMeta({
 
     <Testimonial :testimonial="home.data.testimonial" />
    
+    <Newsletter :newsletter="home.data.newsletter" :button="home.data.newsletter_button"/>
+
 </div>
 
 </template>
