@@ -5,7 +5,8 @@ const props = defineProps({
   size: String,
   variant: String,
   color: String,
-  bg: String
+  bg: String,
+  hasIcon: Boolean
 })
 
 const className = computed(() => ({
@@ -28,6 +29,12 @@ const isVideoButton = computed(() => {
     <MyIcon name="play" stroke="orange" v-if="isVideoButton" />
     <slot></slot>
   </a>
+
+  <button v-else-if="hasIcon" class="c-button -hasIcon" :class="className">
+    <slot></slot>
+    <MyIcon v-if="hasIcon" :class="className" name="right arrow" color="white" stroke="orange" size="big" />
+  </button>
+
   <button v-else class="c-button" :class="className">
     <slot></slot>
   </button>
@@ -53,13 +60,15 @@ const isVideoButton = computed(() => {
   word-wrap: break-word;
   width: fit-content;
   cursor: pointer;
-
+  &.-hasIcon{
+    padding: rem(20) rem(10); 
+  }
   &.-rounded {
     background: $primary-color;
     box-shadow: none;
     border-radius: rem(37);
     font-weight: 500;
-    padding: rem(26) rem(64);
+  
    
   }
 
