@@ -22,57 +22,98 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
 </script>
 
 <template>
-    <section class="c-hero">
-        <div class="c-hero-flex">
-            <div class="c-hero-flex-title">
-                <PrismicRichText :field="title"></PrismicRichText>
+    <div class="hero">
+        <div class="hero__deliveryButton">
+            <ButtonDelivery></ButtonDelivery>
+        </div>
+        <div class="hero__title">
+            <div class="hero__title-space">
+                <MyTitle el="h2" size="big" bold="bold">
+                    <PrismicRichText :field="title"></PrismicRichText>
+            </MyTitle>
+               
             </div>
-
-            <div class="c-hero-flex-text">
+            <MyDesc>
                 <PrismicRichText :field="text"></PrismicRichText>
-            </div>
+            </MyDesc>
 
-            <div class="c-hero-flex-buttons">
+            <div class="hero__buttons">
                 <div v-for="button in buttons">
-                    <MyButton :href="button.button_link.url" :variant="button.button_type">{{ button.button_label }}
+                    <MyButton :href="button.button_link.url" :variant="button.button_type">
+                        {{ button.button_label }}
                     </MyButton>
                 </div>
             </div>
         </div>
-        <HeroCard :menucard="home.data.menucard"></HeroCard>
-    </section>
+        <div class="hero__cardsmenu">
+            <HeroCard :menucard="home.data.menucard"></HeroCard>
+            <div class="hero__cardsmenu-bg"></div>
+        </div>
+    </div>
 </template>
 
 <style lang="scss" >
-.c-hero {
-    &-flex {
-        &-text {
-            font-size: 18px;
-            line-height: 1.3;
-            color: black
+.hero {
+    text-transform: capitalize;
+    position: relative;
+    display: flex;
+    padding-top: rem(30);
+    justify-content: space-between;
+
+    &__deliveryButton {
+        position: absolute;
+        top: rem(40);
+    }
+
+    &__title {
+        width: rem(650);
+        min-width: rem(600);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+            color: $black;
         }
 
-        &-buttons {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-
-            &:not(:first-child) {
-                margin-top: 2rem;
-            }
-        }
-
-        &-title {
-            font-size: 48px;
-            font-weight: 700;
-            line-height: 1.2;
-            color: black;
-
-            strong {
-                color: orange;
-
+        &-space {
+            margin: rem(140) 0 rem(50) 0;
+            strong{
+                color: $primary-color;
             }
         }
     }
+
+    &__cardsmenu {
+
+        position: relative;
+        padding-right: rem(40);
+
+        &-bg {
+            position: absolute;
+            width: rem(445);
+            height: rem(837);
+            background: #D9D9D9;
+            z-index: -99;
+            top: 0;
+            right: 0;
+            border-radius: rem(30);
+            background: linear-gradient(200deg, #D9D9D9 -18.39%, rgba(217, 217, 217, 0.00) 89.51%);
+        }
+    }
+
+    &__buttons {
+        margin-top: rem(80);
+        display: flex;
+        gap: rem(40);
+        align-items: center;
+        &-order {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: rem(20);
+        }
+    }
+
 }
 </style>

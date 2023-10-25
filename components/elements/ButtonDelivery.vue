@@ -5,7 +5,7 @@
     <div class="button__bike">
         <p>Bike delivery</p>
         <div class="button__bike-image">
-            <img src="src/assets/bike_delivery.png" alt="image livraison">
+            <img src="/bikedelivery.png" alt="image livraison">
         </div>
     </div>
 </template>

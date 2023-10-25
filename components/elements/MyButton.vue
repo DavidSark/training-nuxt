@@ -16,6 +16,7 @@ const className = computed(() => ({
   ' -small': props.size === 'small',
   ' -black': props.color === 'black',
   ' -orange': props.color === 'orange',
+  ' -orange': props.variant === 'orange',
   ' -nobg': props.bg === "nobg",
   
 }))
