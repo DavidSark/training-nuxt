@@ -15,7 +15,7 @@ const className = computed(() => ({
   ' -video': props.variant === 'video',
   ' -small': props.size === 'small',
   ' -black': props.color === 'black',
-  ' -orange': props.color === 'orange',
+  ' -orange2': props.color === 'orange',
   ' -orange': props.variant === 'orange',
   ' -nobg': props.bg === "nobg",
   
@@ -103,6 +103,9 @@ const isVideoButton = computed(() => {
     }
   }
   &.-orange {
+    background: $primary-color;
+  }
+  &.-orange2 {
     background: $primary-color;
   }
   &.-small {
