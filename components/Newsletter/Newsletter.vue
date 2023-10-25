@@ -25,6 +25,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .card {
+    
     margin: rem(120) 0;
     background: $black;
     max-height: rem(300);

@@ -1,17 +1,26 @@
 <script setup>
-import {useGlobalStore} from '@/store/global'
+import { useGlobalStore } from '@/store/global'
 const store = useGlobalStore()
 
-onMounted (()=>{
+onMounted(() => {
   const cart = localStorage.getItem('cart')
   store.setCart(JSON.parse(cart))
 })
 </script>
 
 <template>
-  
-    <MyHeader/>
-    <NuxtPage/>
-    <MyFooter/>
-  
+  <div>
+    <MyHeader />
+    <div class="appmain">
+
+      <NuxtPage />
+      <MyFooter />
+    </div>
+  </div>
 </template>
+
+<style lang="scss" scoped>
+.appmain {
+  overflow: hidden;
+}
+</style>

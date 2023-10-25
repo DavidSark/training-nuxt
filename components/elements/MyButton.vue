@@ -69,8 +69,6 @@ const isVideoButton = computed(() => {
     box-shadow: none;
     border-radius: rem(37);
     font-weight: 500;
-  
-   
   }
 
   &.-video {
@@ -85,18 +83,8 @@ const isVideoButton = computed(() => {
     font-weight: 500;
     padding: rem(26) rem(64);
     border: 1px solid $primary-color;
-    transition: all .4s;
-    &:hover{
-      background-color: $primary-color;
-      border: 1px solid $primary-color;
-
-      a{
-        color: white;
-      }
-    }
   }
   &.-black {
-   
     a{
       text-decoration: none;
       color: $black;
