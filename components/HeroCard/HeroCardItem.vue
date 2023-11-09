@@ -15,11 +15,15 @@ const props = defineProps({
 
     <div class="card__content">
       <div class="card__content-flex">
-        <PrismicRichText :field="title" />
+        <span class="card__content-flex-bold">
+          <PrismicRichText :field="title" />
+        </span>
         <PrismicRichText :field="text" />
         <div class="card__content-span">
           <span>$</span>
-          <PrismicRichText :field="price" />
+          <div class="card__content-span-bold">
+            <PrismicRichText :field="price" />
+          </div>
         </div>
       </div>
       <div class="card__content-icon">
@@ -56,12 +60,17 @@ const props = defineProps({
     &-span {
       display: flex;
       justify-content: center;
-
+    
       span {
         color: #EE140A;
         font-weight: bold;
       }
+      &-bold{
+        color: black;
+        font-weight: bold;
+      }
     }
+
 
     &-flex {
       display: flex;
@@ -71,7 +80,9 @@ const props = defineProps({
       padding-top: rem(140);
       gap: 10px;
       position: relative;
-
+      &-bold{
+        font-weight: bold;
+      }
     }
 
     &-icon {
