@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       apiUrl: "",
     },
   },
-  css: ["@/scss/main.scss"],
+  css: ["~/scss/main.scss"],
   vite: {
     css: {
       preprocessorOptions: {

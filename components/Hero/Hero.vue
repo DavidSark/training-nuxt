@@ -31,7 +31,7 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
                 <MyTitle el="h2" size="big" bold="bold">
                     <PrismicRichText :field="title"></PrismicRichText>
             </MyTitle>
-               
+            <PrismicRichText :field="title"></PrismicRichText>
             </div>
             <MyDesc>
                 <PrismicRichText :field="text"></PrismicRichText>
