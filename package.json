@@ -26,14 +26,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.69.2",
+    "sass-loader": "^13.3.2",
     "storybook": "7.5.0-alpha.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
-    "node-sass": "^9.0.0",
-    "pinia": "^2.1.7",
-    "svelte-preprocess": "^5.0.4"
+    "pinia": "^2.1.7"
   }
 }
