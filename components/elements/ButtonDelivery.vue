@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .button__bike{
     display: flex;
     background: $secondary-color;

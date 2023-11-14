@@ -25,7 +25,7 @@ const className = computed (()=>({
   </div>
 </template>
  
-<style lang="scss" scoped>
+<style lang="scss" >
 .desc{
     &.-lightgray{
         color: $gray;

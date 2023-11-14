@@ -58,7 +58,7 @@ import SocialIcon from './elements/SocialIcons.vue'
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .footer{
     width: 100vw;
     height: fit-content;
