@@ -20,6 +20,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" >
+@import '@/scss/main';
 .appmain {
   overflow: hidden;
 }
