@@ -30,8 +30,7 @@ const { data: recipes } = await useAsyncData('recipes', async () => {
             <div class="hero__title-space">
                 <MyTitle el="h2" size="big" bold="bold">
                     <PrismicRichText :field="title"></PrismicRichText>
-            </MyTitle>
-            <PrismicRichText :field="title"></PrismicRichText>
+                </MyTitle>
             </div>
             <MyDesc>
                 <PrismicRichText :field="text"></PrismicRichText>
